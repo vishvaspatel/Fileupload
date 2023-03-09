@@ -57,6 +57,10 @@ app.get('/data',async function(req,res)
   }
 });
 
+app.get('/get/:img',async function(req,res)
+{
+  res.sendFile(__dirname+"\\uploads\\"+req.params.img);
+});
 
 app.get('/adminlogin',async function(req,res)
 {
